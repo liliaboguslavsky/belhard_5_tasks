@@ -11,9 +11,10 @@ is_unique([2, 1, 5, 4, 2]) -> False
 
 
 def is_unique(array: list) -> bool:
-    result = None
-    return result
-
+    if len(array) == len(set(array)):
+        return True
+    else:
+        return False
 
 if __name__ == '__main__':
     assert is_unique([2, 1, 5, 4, 7])
