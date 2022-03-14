@@ -27,9 +27,14 @@ def processing_f(str_with_f: str) -> Union[int, str]:
     :return: строку или индекс
     :rtype: str
     """
-    result = None
-    return result
-
+    if str_with_f.count("f") == 0:
+        return str_with_f.swapcase()
+    elif str_with_f.count("f") == 1:
+        return str_with_f.index("f")
+    elif str_with_f.count("f") == 2:
+        return str_with_f.rindex("f")
+    elif str_with_f.count("f") > 2:
+        return str_with_f[::-1]
 
 if __name__ == '__main__':
     string = input('Введите строку для работы: ')

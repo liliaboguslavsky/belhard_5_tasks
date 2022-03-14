@@ -22,9 +22,20 @@ from typing import Union
 
 
 def calculator(num1: int, num2: int, operation: str) -> Union[int, float, str]:
-    result = None
-    return result
-
+    if operation == "+":
+        result = num1 + num2
+        return result
+    elif operation == "-":
+        result = num1 - num2
+        return result
+    elif operation == "*":
+        result = num1 * num2
+        return result
+    elif operation == "/":
+        result = num1 / num2
+        return result
+    else:
+        return "Неизвестная операция"
 
 if __name__ == '__main__':
     num1_val = int(input('Введите первое число: '))
